@@ -1,0 +1,30 @@
+{
+  "name": "puppeteer-ssr",
+  "version": "1.0.0",
+  "description": "Puppeteer SSR Demo",
+  "main": "index.js",
+  "scripts": {
+    "serve": "nodemon index.js",
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/janumedia/puppeter-ssr.git"
+  },
+  "keywords": [
+    "puppeteer",
+    "ssr"
+  ],
+  "author": "I Nengah Januartha",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/janumedia/puppeter-ssr/issues"
+  },
+  "homepage": "https://github.com/janumedia/puppeter-ssr#readme",
+  "dependencies": {
+    "express": "^4.16.4",
+    "nodemon": "^1.18.4",
+    "puppeteer": "^1.9.0",
+    "request": "^2.88.0"
+  }
+}
