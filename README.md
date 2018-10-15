@@ -7,7 +7,7 @@ Server Side Rendering with Puppeteer
 yarn install
 ```
 
-## Project start
+## Start server
 ```
 yarn serve
 ```
