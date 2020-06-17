@@ -8,26 +8,31 @@ const server = express();
 
 server.get('/js/*', (req, res) => {
     console.log(req.url)
-    request(`https://vue-web-components.netlify.com${req.url}`).pipe(res);
+    request(`https://vue-web-components.netlify.app${req.url}`).pipe(res);
 })
 
 server.get('/css/*', (req, res) => {
     console.log(req.url)
-    request(`https://vue-web-components.netlify.com${req.url}`).pipe(res);
+    request(`https://vue-web-components.netlify.app${req.url}`).pipe(res);
 })
 
 server.get('/data/*', (req, res) => {
     console.log(req.url)
-    request(`https://vue-web-components.netlify.com${req.url}`).pipe(res);
+    request(`https://vue-web-components.netlify.app${req.url}`).pipe(res);
 })
 
 server.get('/images/assets/*', (req, res) => {
     console.log(req.url)
-    request(`https://vue-web-components.netlify.com${req.url}`).pipe(res);
+    request(`https://vue-web-components.netlify.app${req.url}`).pipe(res);
 })
 
-server.get('/', async (req, res) => {
-    console.log(req.hostname, req.url);
+server.get('/favicon.ico', (req, res) => {
+    console.log(req.url)
+    request(`https://vue-web-components.netlify.app${req.url}`).pipe(res);
+})
+
+server.get('*', async (req, res) => {
+      console.log(req.hostname, req.url);
     const {html, renderTime} = await ssrHelper();
     res.set('Server-Timing', `Prerender;dur=${renderTime};desc="Headless render time (ms)`);
     return res.status(200).send(html);
