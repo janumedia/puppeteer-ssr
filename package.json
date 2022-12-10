@@ -22,7 +22,7 @@
   },
   "homepage": "https://github.com/janumedia/puppeter-ssr#readme",
   "dependencies": {
-    "express": "^4.16.4",
+    "express": "^4.17.3",
     "nodemon": "^1.18.4",
     "puppeteer": "^1.9.0",
     "request": "^2.88.0"
